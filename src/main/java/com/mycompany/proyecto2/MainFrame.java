@@ -123,11 +123,13 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel13 = new javax.swing.JPanel();
         jLabel21 = new javax.swing.JLabel();
         txtField1 = new javax.swing.JTextField();
-        jButton14 = new javax.swing.JButton();
+        jButtonParImpar = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         txtArea1 = new javax.swing.JTextArea();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
+        textField1 = new javax.swing.JTextField();
+        textField2 = new javax.swing.JTextField();
         arreglos = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
@@ -873,10 +875,10 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton14.setText("Resultado");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
+        jButtonParImpar.setText("Resultado");
+        jButtonParImpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
+                jButtonParImparActionPerformed(evt);
             }
         });
 
@@ -894,7 +896,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(215, 215, 215)
                         .addComponent(txtField1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jButton14)
+                        .addComponent(jButtonParImpar)
                         .addGap(72, 72, 72)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                     .addGroup(jPanel13Layout.createSequentialGroup()
@@ -912,7 +914,7 @@ public class MainFrame extends javax.swing.JFrame {
                         .addGap(44, 44, 44)
                         .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(txtField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton14)))
+                            .addComponent(jButtonParImpar)))
                     .addGroup(jPanel13Layout.createSequentialGroup()
                         .addGap(18, 18, 18)
                         .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -938,11 +940,21 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 772, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(303, 303, 303)
+                .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(271, Short.MAX_VALUE))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 388, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(300, Short.MAX_VALUE))
         );
 
         programasRepetitivos.addTab("Ejercicio 5", jPanel15);
@@ -1315,7 +1327,6 @@ public class MainFrame extends javax.swing.JFrame {
               for(int i = 1; i < 11; i++){
                   String text = base +" x " + i + " = " + base*i;
                   prueba.append("\n " + text);
-               
               }
           }
         
@@ -1342,14 +1353,22 @@ public class MainFrame extends javax.swing.JFrame {
         prueba.setText(null);
     }//GEN-LAST:event_jButton13ActionPerformed
 
+
     private void txtField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtField1ActionPerformed
         // TDO add your handling code here:ss
     }//GEN-LAST:event_txtField1ActionPerformed
 
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {                                          
         
         
-        int num = Integer.parseInt(txtField1.getText());
+        
+        int ola = Integer.parseInt(textField1.getText());
+           int ola2 = Integer.parseInt(textField2.getText());
+           JOptionPane.showMessageDialog(null,ola + ola2, "Suma",JOptionPane.INFORMATION_MESSAGE);
+    }
+    private void jButtonParImparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonParImparActionPerformed
+          
+       int num = Integer.parseInt(txtField1.getText());
        
         for(int i = 0 ; i<=num ; i++){
             if(i%2 == 0 ){
@@ -1358,8 +1377,7 @@ public class MainFrame extends javax.swing.JFrame {
                 txtArea1.append(i + " Numero Impar \n" );
             }
         }
-        
-    }//GEN-LAST:event_jButton14ActionPerformed
+    }//GEN-LAST:event_jButtonParImparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1403,7 +1421,6 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1412,6 +1429,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JButton jButtonParImpar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1499,6 +1517,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField ptt1TextField2;
     private javax.swing.JTextField ptt1TextField3;
     private javax.swing.JComboBox<String> ptt22TextField1;
+    private javax.swing.JTextField textField1;
+    private javax.swing.JTextField textField2;
     private javax.swing.JTextArea txtArea1;
     private javax.swing.JTextField txtField1;
     // End of variables declaration//GEN-END:variables
