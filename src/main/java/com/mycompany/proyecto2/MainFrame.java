@@ -121,6 +121,11 @@ public class MainFrame extends javax.swing.JFrame {
         pt32TextField1 = new javax.swing.JTextField();
         jButton12 = new javax.swing.JButton();
         jPanel13 = new javax.swing.JPanel();
+        jLabel21 = new javax.swing.JLabel();
+        txtField1 = new javax.swing.JTextField();
+        jButton14 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        txtArea1 = new javax.swing.JTextArea();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
         arreglos = new javax.swing.JTabbedPane();
@@ -859,15 +864,59 @@ public class MainFrame extends javax.swing.JFrame {
 
         programasRepetitivos.addTab("Ejercicio 2", jPanel12);
 
+        jLabel21.setFont(new java.awt.Font("sansserif", 1, 24)); // NOI18N
+        jLabel21.setText(" Números pares e impares de 0 a ‘n’ numero");
+
+        txtField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtField1ActionPerformed(evt);
+            }
+        });
+
+        jButton14.setText("Resultado");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
+        txtArea1.setColumns(20);
+        txtArea1.setRows(5);
+        jScrollPane2.setViewportView(txtArea1);
+
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 772, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel13Layout.createSequentialGroup()
+                        .addGap(215, 215, 215)
+                        .addComponent(txtField1, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton14)
+                        .addGap(72, 72, 72)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addContainerGap(139, Short.MAX_VALUE)
+                        .addComponent(jLabel21)))
+                .addGap(129, 129, 129))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 388, Short.MAX_VALUE)
+            .addGroup(jPanel13Layout.createSequentialGroup()
+                .addGap(55, 55, 55)
+                .addComponent(jLabel21)
+                .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(44, 44, 44)
+                        .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(txtField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jButton14)))
+                    .addGroup(jPanel13Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
         programasRepetitivos.addTab("Ejercicio 3", jPanel13);
@@ -1293,6 +1342,25 @@ public class MainFrame extends javax.swing.JFrame {
         prueba.setText(null);
     }//GEN-LAST:event_jButton13ActionPerformed
 
+    private void txtField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtField1ActionPerformed
+        // TDO add your handling code here:ss
+    }//GEN-LAST:event_txtField1ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+        
+        
+        int num = Integer.parseInt(txtField1.getText());
+       
+        for(int i = 0 ; i<=num ; i++){
+            if(i%2 == 0 ){
+                txtArea1.append(i + " Numero Par \n" );
+            }else if(i%2 != 0){
+                txtArea1.append(i + " Numero Impar \n" );
+            }
+        }
+        
+    }//GEN-LAST:event_jButton14ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1335,6 +1403,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1356,6 +1425,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -1379,6 +1449,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTabbedPane jTabbedPane3;
@@ -1428,5 +1499,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField ptt1TextField2;
     private javax.swing.JTextField ptt1TextField3;
     private javax.swing.JComboBox<String> ptt22TextField1;
+    private javax.swing.JTextArea txtArea1;
+    private javax.swing.JTextField txtField1;
     // End of variables declaration//GEN-END:variables
 }
