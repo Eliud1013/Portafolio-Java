@@ -123,6 +123,9 @@ public class MainFrame extends javax.swing.JFrame {
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jPanel15 = new javax.swing.JPanel();
+        textField1 = new javax.swing.JTextField();
+        textField2 = new javax.swing.JTextField();
+        jButton14 = new javax.swing.JButton();
         arreglos = new javax.swing.JTabbedPane();
         jPanel8 = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
@@ -885,15 +888,38 @@ public class MainFrame extends javax.swing.JFrame {
 
         programasRepetitivos.addTab("Ejercicio 4", jPanel14);
 
+        jButton14.setText("jButton14");
+        jButton14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton14ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
         jPanel15.setLayout(jPanel15Layout);
         jPanel15Layout.setHorizontalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 772, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(303, 303, 303)
+                .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(271, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton14)
+                .addGap(322, 322, 322))
         );
         jPanel15Layout.setVerticalGroup(
             jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 388, Short.MAX_VALUE)
+            .addGroup(jPanel15Layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addGroup(jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(textField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(textField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(29, 29, 29)
+                .addComponent(jButton14)
+                .addContainerGap(236, Short.MAX_VALUE))
         );
 
         programasRepetitivos.addTab("Ejercicio 5", jPanel15);
@@ -1266,7 +1292,6 @@ public class MainFrame extends javax.swing.JFrame {
               for(int i = 1; i < 11; i++){
                   String text = base +" x " + i + " = " + base*i;
                   prueba.append("\n " + text);
-               
               }
           }
         
@@ -1292,6 +1317,12 @@ public class MainFrame extends javax.swing.JFrame {
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
         prueba.setText(null);
     }//GEN-LAST:event_jButton13ActionPerformed
+
+    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
+          int ola = Integer.parseInt(textField1.getText());
+           int ola2 = Integer.parseInt(textField2.getText());
+           JOptionPane.showMessageDialog(null,ola + ola2, "Suma",JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jButton14ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1335,6 +1366,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton11;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton13;
+    private javax.swing.JButton jButton14;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
@@ -1428,5 +1460,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JTextField ptt1TextField2;
     private javax.swing.JTextField ptt1TextField3;
     private javax.swing.JComboBox<String> ptt22TextField1;
+    private javax.swing.JTextField textField1;
+    private javax.swing.JTextField textField2;
     // End of variables declaration//GEN-END:variables
 }
