@@ -160,6 +160,9 @@ public class MainFrame extends javax.swing.JFrame {
         arrt4TextArea = new javax.swing.JTextArea();
         jPanel17 = new javax.swing.JPanel();
         jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        arrt5TextField1 = new javax.swing.JTextField();
+        arrt5Button1 = new javax.swing.JButton();
         poo = new javax.swing.JTabbedPane();
         jButton4 = new javax.swing.JButton();
         jTabbedPane3 = new javax.swing.JTabbedPane();
@@ -1240,21 +1243,56 @@ public class MainFrame extends javax.swing.JFrame {
         jLabel29.setFont(new java.awt.Font("Ubuntu", 1, 24)); // NOI18N
         jLabel29.setText("Sumatoria y promedio de un arreglo");
 
+        jLabel30.setFont(new java.awt.Font("Ubuntu", 1, 18)); // NOI18N
+        jLabel30.setText("Ingresa cuantos numeros quieres");
+
+        arrt5TextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arrt5TextField1ActionPerformed(evt);
+            }
+        });
+
+        arrt5Button1.setText("Aceptar");
+        arrt5Button1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                arrt5Button1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
         jPanel17.setLayout(jPanel17Layout);
         jPanel17Layout.setHorizontalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel17Layout.createSequentialGroup()
+                .addGap(333, 333, 333)
+                .addComponent(jLabel30)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
-                .addContainerGap(300, Short.MAX_VALUE)
-                .addComponent(jLabel29)
-                .addGap(208, 208, 208))
+                .addContainerGap(267, Short.MAX_VALUE)
+                .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addComponent(jLabel29)
+                        .addGap(241, 241, 241))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel17Layout.createSequentialGroup()
+                        .addGroup(jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(arrt5TextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel17Layout.createSequentialGroup()
+                                .addGap(12, 12, 12)
+                                .addComponent(arrt5Button1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(406, 406, 406))))
         );
         jPanel17Layout.setVerticalGroup(
             jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel17Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
                 .addComponent(jLabel29)
-                .addContainerGap(397, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addComponent(jLabel30)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(arrt5TextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(arrt5Button1)
+                .addContainerGap(277, Short.MAX_VALUE))
         );
 
         arreglos.addTab("Ejercicio 5", jPanel17);
@@ -1739,6 +1777,26 @@ public class MainFrame extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_arrt4TextField1ActionPerformed
 
+    private void arrt5TextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arrt5TextField1ActionPerformed
+        
+    }//GEN-LAST:event_arrt5TextField1ActionPerformed
+
+    private void arrt5Button1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_arrt5Button1ActionPerformed
+        int arrayLength = Integer.parseInt(arrt5TextField1.getText());
+        int[] arreglo = new int[arrayLength];
+        for(int i = 0; i <= arreglo.length - 1; i++){
+            int value = Integer.parseInt(JOptionPane.showInputDialog("Ingrese el numero " + (i + 1)));
+            arreglo[i] = value;
+        }
+        int sumatoria = 0;
+        for(int i = 0; i <= arreglo.length - 1; i++){
+             sumatoria = sumatoria + arreglo[i];
+             System.out.println(sumatoria);
+        }
+        JOptionPane.showMessageDialog(null, "La sumatoria  de los numeros es " + sumatoria, "Sumatoria", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null, "El promedio  de los numeros es " + (sumatoria/arreglo.length), "Sumatoria", JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_arrt5Button1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -1786,6 +1844,8 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JButton arrt4Button1;
     private javax.swing.JTextArea arrt4TextArea;
     private javax.swing.JTextField arrt4TextField1;
+    private javax.swing.JButton arrt5Button1;
+    private javax.swing.JTextField arrt5TextField1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
@@ -1823,6 +1883,7 @@ public class MainFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
